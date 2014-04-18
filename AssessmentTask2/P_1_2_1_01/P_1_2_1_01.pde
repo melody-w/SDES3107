@@ -18,25 +18,33 @@
 
 
 
+float c = 0;
+float s = 0;
+
 
 void setup() {
   size(800,800);
   colorMode(HSB, width, height, 100); 
   noStroke();
- 
+  frameRate(30);
 }
 
 int barWidth = 20;
 int lastBar = -1;
 
 void draw() {
- int whichBar = mouseX / barWidth;
- if (whichBar != lastBar) {
-   int barX =whichBar * barWidth;
-  fill(barX, mouseY, 66);
-  rect(barX, 0, barWidth, height);
-  lastBar = whichBar;
- }
+  
+  
+  c = c+ 1;
+  s = cos(c)*4;
+  
+  translate(width/2, height/2);
+  scale(s);
+  float h = random (0,360);
+  fill(h,90,90);
+  ellipse(400, 400, 70,70);
+  
+ 
 }
 
 
