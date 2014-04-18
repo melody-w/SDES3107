@@ -44,7 +44,12 @@ void draw() {
   fill(h,90,90);
   ellipse(400, 400, 70,70);
   
+  translate(75,0);
+  fill(h,255,255);
+  scale(s);
+  ellipse(0,0,70,70);
  
 }
+
 
 
